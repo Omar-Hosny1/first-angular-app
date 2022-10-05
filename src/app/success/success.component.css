@@ -1,0 +1,13 @@
+.success-msg {
+  width: 500px;
+  border-radius: 10px;
+  display: block;
+  background-color: rgb(98, 80, 255);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  margin: 300px 0;
+}
