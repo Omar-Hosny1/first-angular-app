@@ -8,6 +8,8 @@ import { SuccessComponent } from './success/success.component';
 import { WarningComponent } from './warning/warning.component';
 import { AlertComponent } from './alert/alert.component';
 import { FormsModule } from '@angular/forms';
+import { AppAssigment } from './secondAssigment/assigment.component';
+import { ThirdAssigment } from './thirdAssigment/thirdA.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,6 +18,8 @@ import { FormsModule } from '@angular/forms';
     WarningComponent,
     SuccessComponent,
     AlertComponent,
+    AppAssigment,
+    ThirdAssigment,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],

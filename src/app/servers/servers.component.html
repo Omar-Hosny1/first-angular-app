@@ -1,10 +1,6 @@
 <label for="">Server Name</label>
-<input
-  type="text"
-  class="form-control"
-  (input)="onUpdateServerName($event)"
-  [ngModel]="serverName"
-/>
+<!-- <input type="text" class="form-control" (input)="onUpdateServerName($event)" [(ngModel)]="serverName"/> -->
+<input type="text" class="form-control" [(ngModel)]="serverName" />
 <button
   class="btn btn-primary"
   [disabled]="!allowNewServer"
@@ -12,6 +8,14 @@
 >
   Add Server
 </button>
-<p>{{ serverCreationStatus }}</p>
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor="let server of servers"></app-server>
+<!-- <p>{{ serverCreationStatus }}</p> -->
+<!-- <p [innerText]="allowNewServer"></p> -->
+<!-- <p>{{ serverName }}</p> -->
+<p *ngIf="serverCreated; else noServer">
+  Server Was Created, Name is {{ serverName }}
+</p>
+<ng-template #noServer>
+  <p>No Server Was Created</p>
+</ng-template>
+<!-- *ngIf => condetional Rendering in React -->

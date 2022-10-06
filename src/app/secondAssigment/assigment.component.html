@@ -1,0 +1,13 @@
+<div class="container">
+  <label for="form">Authentication</label>
+  <input type="text" id="form" [(ngModel)]="userName" class="form-control" />
+  <button
+    class="btn btn-primary"
+    [disabled]="!!!userName"
+    (click)="onResetUser()"
+  >
+    Reset User
+  </button>
+  <hr />
+  <p>{{ userName }}</p>
+</div>

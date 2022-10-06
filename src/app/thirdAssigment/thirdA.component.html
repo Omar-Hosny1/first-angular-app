@@ -1,0 +1,9 @@
+<button (click)="reverseShowPassword()">Display Details</button>
+<p *ngIf="showPassword">Secret Password = "Tuna"</p>
+<div
+  *ngFor="let item of items"
+  [ngStyle]="{ backgroundColor: item > 4 ? 'blue' : '' }"
+  [ngClass]="{ after: item > 4 }"
+>
+  {{ item }}
+</div>
